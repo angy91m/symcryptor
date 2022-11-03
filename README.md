@@ -84,7 +84,7 @@ symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 
 ### `symCryptor.decrypt`
 ```javascript
-symCryptor.decrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
 ```
 
 #### Parameters
