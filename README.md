@@ -42,7 +42,7 @@ symCryptor.rndBytes( length: Number [, bytes: Boolean = false] )
 
 #### Return
 
-`Buffer | Uint8Array` when `Promise` resolved else throw an Error
+`Buffer | Uint8Array` when `Promise` resolved else throw an `Error`
 
 ### `symCryptor.getHmac`
 ```javascript
@@ -58,7 +58,7 @@ symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 
 #### Return
 
-`Buffer | Uint8Array` else throw an Error
+`Buffer | Uint8Array` else throw an `Error`
 
 ### `symCryptor.encrypt`
 ```javascript
@@ -75,7 +75,7 @@ symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashK
 
 #### Return
 
-`Buffer | Uint8Array` when `Promise` resolved else throw an Error
+`Buffer | Uint8Array` when `Promise` resolved else throw an `Error`
 
 ### `symCryptor.decrypt`
 ```javascript
@@ -92,4 +92,4 @@ symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashK
 
 #### Return
 
-`Buffer | Uint8Array` when `Promise` resolved else throw an Error
+`Buffer | Uint8Array` when `Promise` resolved else throw an `Error`
