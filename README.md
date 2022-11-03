@@ -30,7 +30,7 @@ const symCryptor = require( 'symcryptor' );
 
 ## Methods
 
-### `symCryptor.rndBytes``
+### `symCryptor.rndBytes`
 ```javascript
 symCryptor.rndBytes( length: Number [, bytes: Boolean = false] )
 ```
