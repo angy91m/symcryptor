@@ -16,7 +16,7 @@ const symCryptor = require( 'symcryptor' );
     const clearText = 'Hello world!';
 
     // For hashing
-    const hashSecret = await symCryptor.rndBytes( 32 ); // Return a 256-bit Buffer
+    const hashSecret = await symCryptor.rndBytes( 32 ); // Return a random 256-bit Buffer
     const digest = symCryptor.getHmac( clearText, hashSecret ); // Return a 512-bit Buffer as digest
 
     // For encryption
@@ -30,7 +30,10 @@ const symCryptor = require( 'symcryptor' );
 
 ## Methods
 
-#### `symCryptor.rndBytes( length: Number [, bytes: Boolean = false] )`
+### `symCryptor.rndBytes``
+```javascript
+symCryptor.rndBytes( length: Number [, bytes: Boolean = false] )
+```
 
 #### Parameters
 
@@ -41,7 +44,10 @@ const symCryptor = require( 'symcryptor' );
 
 `Buffer | Uint8Array` when `Promise` resolved else throw an Error
 
-#### `symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]] )`
+### `symCryptor.getHmac`
+```javascript
+symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]] )
+```
 
 #### Parameters
 
@@ -54,7 +60,10 @@ const symCryptor = require( 'symcryptor' );
 
 `Buffer | Uint8Array` else throw an Error
 
-#### `symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )`
+### `symCryptor.encrypt`
+```javascript
+symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+```
 
 #### Parameters
 
@@ -68,7 +77,10 @@ const symCryptor = require( 'symcryptor' );
 
 `Buffer | Uint8Array` when `Promise` resolved else throw an Error
 
-#### `symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )`
+### `symCryptor.decrypt`
+```javascript
+symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+```
 
 #### Parameters
 
