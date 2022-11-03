@@ -67,7 +67,7 @@ symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 
 ### `symCryptor.encrypt`
 ```javascript
-symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
 ```
 
 #### Parameters
@@ -84,7 +84,7 @@ symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashK
 
 ### `symCryptor.decrypt`
 ```javascript
-symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+symCryptor.decrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
 ```
 
 #### Parameters
