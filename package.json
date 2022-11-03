@@ -1,0 +1,30 @@
+{
+  "name": "symcryptor",
+  "version": "1.0.0",
+  "description": "A simple symmetric encryptor with aes-256-ctr and kmac256",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angy91m/symcryptor.git"
+  },
+  "keywords": [
+    "aes",
+    "aes-ctr",
+    "aes-256-ctr",
+    "sha3",
+    "kmac",
+    "kmac256"
+  ],
+  "author": "angy91m",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/angy91m/symcryptor/issues"
+  },
+  "homepage": "https://github.com/angy91m/symcryptor#readme",
+  "dependencies": {
+    "js-sha3": "^0.8.0"
+  }
+}
