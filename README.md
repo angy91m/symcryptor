@@ -8,6 +8,11 @@ SymCryptor allows you to easy use a symmetric encryption (with AES-CTR-256) and 
 npm i symcryptor
 ```
 
+## Test
+```bash
+npm test
+```
+
 ## Usage
 
 ```javascript
