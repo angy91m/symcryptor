@@ -1,6 +1,6 @@
 {
   "name": "symcryptor",
-  "version": "0.9",
+  "version": "0.9.1",
   "description": "SymCryptor allows you to easy use a symmetric encryption (with AES-CTR-256) and a signature method (with KMAC-256)",
   "main": "index.js",
   "scripts": {
