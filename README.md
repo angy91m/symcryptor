@@ -59,7 +59,7 @@ const symCryptor = require( 'symcryptor' );
 #### Parameters
 
 * `data` Required - The data you want to encrypt
-* `key` Required - The key you to use for encryption (it must be of 256-bit)
+* `key` Required - The key you want to use for encryption (it must be of 256-bit)
 * `hashKey` Optional - The key you want to use to sign encrypted data
 * `customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
 * `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
