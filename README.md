@@ -47,7 +47,7 @@ symCryptor.rndBytes( length: Number [, bytes: Boolean = false] )
 
 #### Return
 
-`Buffer | Uint8Array` when `Promise` resolved else throw an `Error`
+Random `Buffer | Uint8Array` of selected length when `Promise` resolved else throw an `Error`
 
 ### `symCryptor.getHmac`
 ```javascript
@@ -63,7 +63,7 @@ symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 
 #### Return
 
-`Buffer | Uint8Array` else throw an `Error`
+A 512-bit `Buffer | Uint8Array` as digest else throw an `Error`
 
 ### `symCryptor.encrypt`
 ```javascript
@@ -98,3 +98,6 @@ symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashK
 #### Return
 
 `Buffer | Uint8Array` when `Promise` resolved else throw an `Error`
+
+## Note
+* IV and signature are automatically added to encrypted data and removed when data will be decrypted
