@@ -34,52 +34,49 @@ const symCryptor = require( 'symcryptor' );
 
 #### Parameters
 
-`length` Required - The length of random data in bytes
-`bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
+* `length` Required - The length of random data in bytes
+* `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
 
 #### Return
 
 `Buffer | Uint8Array` when `Promise` resolved else throw an Error
-
 
 #### `symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]] )`
 
 #### Parameters
 
-`data` Required - The data you want hash
-`key` Required - The secret key (it should be of 256-bit)
-`customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
-`bytes` Optional - If `true` return `Uint8Array` instead of `Buffer`
+* `data` Required - The data you want hash
+* `key` Required - The secret key (it should be of 256-bit)
+* `customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
+* `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer`
 
 #### Return
 
 `Buffer | Uint8Array` else throw an Error
 
-
 #### `symCryptor.encrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )`
 
 #### Parameters
 
-`data` Required - The data you want to encrypt
-`key` Required - The key you to use for encryption (it must be of 256-bit)
-`hashKey` Optional - The key you want to use to sign encrypted data
-`customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
-`bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
+* `data` Required - The data you want to encrypt
+* `key` Required - The key you to use for encryption (it must be of 256-bit)
+* `hashKey` Optional - The key you want to use to sign encrypted data
+* `customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
+* `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
 
 #### Return
 
 `Buffer | Uint8Array` when `Promise` resolved else throw an Error
 
-
 #### `symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )`
 
 #### Parameters
 
-`data` Required - The encrypted data you want to decrypt
-`key` Required - The key you have to use for decryption (it must be of 256-bit)
-`hashKey` Optional - The key you have to use to verify signature of encrypted data (required if data was signed)
-`customization` Optional - A string you have to pass to hash algorithm (like AAD in AES-GCM; required if it was passed during encryption)
-`bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
+* `data` Required - The encrypted data you want to decrypt
+* `key` Required - The key you have to use for decryption (it must be of 256-bit)
+* `hashKey` Optional - The key you have to use to verify signature of encrypted data (required if data was signed)
+* `customization` Optional - A string you have to pass to hash algorithm (like AAD in AES-GCM; required if it was passed during encryption)
+* `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
 
 #### Return
 
