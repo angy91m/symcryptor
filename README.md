@@ -51,14 +51,14 @@ Random `Buffer | Uint8Array` of selected length when `Promise` resolved else thr
 
 ### `symCryptor.getHmac`
 ```javascript
-symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]] )
+symCryptor.getHmac( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, customization: String | Buffer | Uint8Array = '' [, bytes: Boolean = false]] )
 ```
 
 #### Parameters
 
 * `data` Required - The data you want hash
 * `key` Required - The secret key (it should be of 256-bit)
-* `customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
+* `customization` Optional - Some data you want to pass to hash algorithm (like AAD in AES-GCM)
 * `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer`
 
 #### Return
@@ -67,7 +67,7 @@ A 512-bit `Buffer | Uint8Array` as digest else throw an `Error`
 
 ### `symCryptor.encrypt`
 ```javascript
-symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String | Buffer | Uint8Array = '' [, bytes: Boolean = false]]] )
 ```
 
 #### Parameters
@@ -75,7 +75,7 @@ symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 * `data` Required - The data you want to encrypt
 * `key` Required - The key you want to use for encryption (it must be of 256-bit)
 * `hashKey` Optional - The key you want to use to sign encrypted data
-* `customization` Optional - A string you want to pass to hash algorithm (like AAD in AES-GCM)
+* `customization` Optional - Some data you want to pass to hash algorithm (like AAD in AES-GCM)
 * `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
 
 #### Return
@@ -84,7 +84,7 @@ symCryptor.encrypt( data: String | Buffer | Uint8Array, key: Buffer | Uint8Array
 
 ### `symCryptor.decrypt`
 ```javascript
-symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String = '' [, bytes: Boolean = false]]] )
+symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashKey: Buffer | Uint8Array [, customization: String | Buffer | Uint8Array = '' [, bytes: Boolean = false]]] )
 ```
 
 #### Parameters
@@ -92,7 +92,7 @@ symCryptor.decrypt( data: Buffer | Uint8Array, key: Buffer | Uint8Array [, hashK
 * `data` Required - The encrypted data you want to decrypt
 * `key` Required - The key you have to use for decryption (it must be of 256-bit)
 * `hashKey` Optional - The key you have to use to verify signature of encrypted data (required if data was signed)
-* `customization` Optional - A string you have to pass to hash algorithm (like AAD in AES-GCM; required if it was passed during encryption)
+* `customization` Optional - Some data you have to pass to hash algorithm (like AAD in AES-GCM; required if it was passed during encryption)
 * `bytes` Optional - If `true` return `Uint8Array` instead of `Buffer` on fulfillment
 
 #### Return
