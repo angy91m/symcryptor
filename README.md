@@ -1,6 +1,6 @@
 # SymCryptor
 
-SymCryptor allows you to easy use a symmetric encryption (with AES-CTR-256) and a signature method (with KMAC-256).
+SymCryptor allows you to easy use a symmetric encryption (with AES-CTR-256) and a signature method (with KMAC-256)
 
 ## Installation
 
